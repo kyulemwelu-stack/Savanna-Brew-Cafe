@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savanna Brew Café | Contact & Reservations</title>
+    
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Playfair Display, Open Sans & Caveat -->
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Fraunces - Café Name -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,700,50,1&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <header>
+        <h1>Savanna Brew Café</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <h2>Come On In.</h2>
+            <p>Your next coffee break is just around the corner.</p>
+        </section>
+
+    
+<!-- CONTACT & RESERVATIONS -->
+<section class="contact-content">
+
+    <div class="contact-grid">
+
+        <!-- LEFT: RESERVATION FORM -->
+        <div class="reservation-panel">
+
+            <p class="booking-kicker">
+                BOOK YOUR LITTLE CORNER
+            </p>
+
+            <h2><em>Choose</em> a Time.</h2>
+
+            <div class="booking-steps">
+                <span>01 · Your Details</span>
+                <span>02 · Date & Time</span>
+                <span>03 · Requests</span>
+            </div>
+
+            <form id="reservation-form">
+
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name"
+                           name="full-name"
+                           placeholder="Enter your full name"
+                           required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email"
+                           name="email"
+                           placeholder="you@example.com"
+                           required>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone"
+                           name="phone"
+                           placeholder="0712 345 678">
+                </div>
+
+                <!-- Reservation Date -->
+                <div class="form-group">
+                    <label for="reservation-date">
+                        Reservation Date
+                    </label>
+                    <input type="date"
+                           id="reservation-date"
+                           name="reservation-date"
+                           required>
+                </div>
+
+                <!-- Reservation Time -->
+                <div class="form-group">
+                    <label for="reservation-time">
+                        Reservation Time
+                    </label>
+                    <input type="time"
+                           id="reservation-time"
+                           name="reservation-time"
+                           required>
+                </div>
+
+                <!-- Number of Guests -->
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">Select guests</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="5">5 Guests</option>
+                        <option value="6">6 Guests</option>
+                        <option value="7">7 Guests</option>
+                        <option value="8">8 Guests</option>
+                        <option value="9">9 Guests</option>
+                        <option value="10">10 Guests</option>
+                    </select>
+                </div>
+
+                <!-- Occasion -->
+                <fieldset class="form-group">
+                    <legend>What's the Occasion?</legend>
+
+                    <label>
+                        <input type="radio"
+                               name="occasion"
+                               value="casual">
+                        Casual
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="occasion"
+                               value="birthday">
+                        Birthday
+                    </label>
+
+                    <label>
+                        <input type="radio"
+                               name="occasion"
+                               value="business">
+                        Business
+                    </label>
+                </fieldset>
+
+                <!-- Special Requests -->
+                <div class="form-group">
+                    <label for="special-requests">
+                        Special Requests
+                    </label>
+
+                    <textarea id="special-requests"
+                              name="special-requests"
+                              rows="5"
+                              placeholder="Anything you'd like us to know?"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn">
+                    Reserve a Table
+                </button>
+
+            </form>
+
+        </div>
+        <!-- END RESERVATION PANEL -->
+
+
+        <!-- RIGHT: CONTACT INFORMATION -->
+        <div class="contact-info">
+
+            <h2>Find Us</h2>
+
+            <div class="info-group">
+                <h3>Our Location</h3>
+                <p>14 Coffee Lane, Westlands, Nairobi</p>
+            </div>
+
+            <div class="info-group">
+                <h3>Give Us a Call</h3>
+                <p>
+                    <a href="tel:+254700123456">
+                        +254 700 123 456
+                    </a>
+                </p>
+            </div>
+
+            <div class="info-group">
+                <h3>Drop Us a Line</h3>
+                <p>
+                    <a href="mailto:hello@savannabrew.example">
+                        hello@savannabrew.example
+                    </a>
+                </p>
+            </div>
+
+            <!-- Opening Hours -->
+            <div class="opening-hours">
+                <h3>Opening Hours</h3>
+
+                <table class="hours-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Day</th>
+                            <th scope="col">Hours</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Monday – Friday</td>
+                            <td>7 AM – 9 PM</td>
+                        </tr>
+
+                        <tr>
+                            <td>Saturday</td>
+                            <td>8 AM – 10 PM</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sunday</td>
+                            <td>9 AM – 6 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <!-- END CONTACT INFORMATION -->
+
+    </div>
+    <!-- END CONTACT GRID -->
+
+</section>
+<!-- END CONTACT SECTION -->
+
+
+
+    </main>
+
+<footer>
+    <div class="footer-container">
+
+        <!-- Café Branding -->
+        <div class="footer-column footer-brand">
+            <h3>Savanna Brew Café</h3>
+            <p>14 Coffee Lane</p>
+            <p>Westlands, Nairobi</p>
+        </div>
+
+        <!-- Opening Hours -->
+        <div class="footer-column">
+            <h3>Opening Hours</h3>
+            <p>Monday – Friday: 7 AM – 9 PM</p>
+            <p>Saturday: 8 AM – 10 PM</p>
+            <p>Sunday: 9 AM – 6 PM</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-column">
+            <h3>Follow Along</h3>
+
+            
+<div class="social-links">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Instagram">
+
+        <svg viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.8"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="18" cy="6" r="1"/>
+        </svg>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Facebook">
+
+        <svg viewBox="0 0 24 24"
+             fill="currentColor"
+             aria-hidden="true">
+            <path d="M15 21v-7h3l.5-4H15V8c0-1.2.4-2 2-2h2V2.3C18.3 2.1 17.5 2 16.3 2 12.8 2 11 4.1 11 8v2H8v4h3v7h4z"/>
+        </svg>
+    </a>
+
+</div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Savanna Brew Café. All rights reserved.</p>
+
+        <p class="footer-tagline">
+            Brewed in Kenya. Served with love.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

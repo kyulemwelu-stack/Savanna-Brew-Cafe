@@ -1,0 +1,2032 @@
+
+/* ==================================
+   SAVANNA BREW CAFÉ
+   Colours and Typography
+================================== */
+
+/* 1. Colour Variables */
+:root {
+    --primary-color: #6F4E37;
+    --secondary-color: #F5E9DA;
+    --accent-color: #D9822B;
+    --dark-text: #2B1B12;
+    --white: #FFFFFF;
+
+    /* Additional Brand Colours */
+    --leaf-green: #43533D;
+    --porcelain-blue: #88B8CE;
+
+    /* Typography */
+    --heading-font: "Playfair Display", Georgia, serif;
+    --body-font: "Open Sans", Arial, sans-serif;
+    --accent-font: "Caveat", cursive;
+}
+
+/* 2. Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 3. Body Styling */
+body {
+    background-color: var(--secondary-color);
+    color: var(--dark-text);
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 4. Headings */
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+}
+
+/* 5. Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==================================
+   6. HEADER & NAVIGATION
+================================== */
+
+/* Header Layout */
+header {
+    background-color: var(--secondary-color);
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    border-bottom: 1px solid rgba(111, 78, 55, 0.2);
+}
+
+/* Café Name */
+header h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    color: var(--primary-color);
+    white-space: nowrap;
+}
+
+
+/* Navigation List */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Navigation Links */
+nav a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Hover and Keyboard Focus */
+nav a:hover,
+nav a:focus-visible {
+    color: var(--accent-color);
+}
+
+/* Active Page */
+nav a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    
+    header h1 {
+    font-size: 30px;
+    white-space: normal;
+    }
+
+}
+
+
+/* ==================================
+   7. HOME HERO SECTION
+================================== */
+
+.hero {
+    position: relative;
+    min-height: 600px;
+    padding: 100px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-image:
+        linear-gradient(
+            rgba(43, 27, 18, 0.35),
+            rgba(43, 27, 18, 0.20)
+        ),
+        url("../images/hero.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: var(--white);
+}
+
+/* Hero Heading */
+.hero h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(40px, 5vw, 76px);
+    font-weight: 600;
+    line-height: 1.15;
+    max-width: 750px;
+    margin-bottom: 24px;
+}
+
+/* Hero Description */
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 32px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Button Hover */
+.btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Keyboard Focus */
+.btn:focus-visible {
+    outline: 3px solid var(--porcelain-blue);
+    outline-offset: 4px;
+}
+
+/* Mobile Hero */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 480px;
+        padding: 70px 6%;
+        background-position: center;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+/* ==================================
+   8. WELCOME SECTION
+================================== */
+
+.welcome {
+    background-color: var(--secondary-color);
+    padding: 100px 8%;
+    text-align: center;
+}
+
+/* Welcome Heading */
+.welcome h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 600;
+    color: var(--primary-color);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+/* Decorative Golden Line */
+.welcome h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 25px auto 0;
+    border-radius: 10px;
+}
+
+/* Welcome Paragraph */
+.welcome p {
+    font-family: var(--body-font);
+    font-size: 18px;
+    line-height: 1.9;
+    color: var(--dark-text);
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Mobile Welcome Section */
+@media (max-width: 768px) {
+    .welcome {
+        padding: 65px 6%;
+    }
+
+    .welcome h2 {
+        font-size: 32px;
+    }
+
+    .welcome p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}
+
+/* ==================================
+   9. OUR FAVOURITES SECTION
+================================== */
+
+/* Section Layout */
+.favourites {
+    background-color: #FEFAF0;
+    padding: 90px 8%;
+    text-align: center;
+}
+
+/* Section Heading */
+.favourites h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(32px, 4vw, 46px);
+    color: var(--primary-color);
+    margin-bottom: 45px;
+}
+
+/* Product Cards Container */
+.favourites-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Product Card */
+.product-card {
+    flex: 1 1 280px;
+    max-width: 380px;
+    background-color: var(--secondary-color);
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 20px rgba(43, 27, 18, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(43, 27, 18, 0.16);
+}
+
+/* Product Images */
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Product Name */
+.product-card h3 {
+    font-family: var(--heading-font);
+    font-size: 25px;
+    color: var(--primary-color);
+    margin: 22px 15px 10px;
+}
+
+/* Product Price */
+.product-card p {
+    font-family: var(--body-font);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 26px;
+}
+
+/* Tablet Layout */
+@media (max-width: 900px) {
+    .favourites {
+        padding: 70px 6%;
+    }
+
+    .product-card {
+        flex: 1 1 240px;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .favourites {
+        padding: 60px 5%;
+    }
+
+    .favourites-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 420px;
+        flex: none;
+    }
+
+    .product-card img {
+        height: 260px;
+    }
+}
+
+/* ==================================
+   10. RESERVATION CTA SECTION
+================================== */
+
+/* Section Background & Layout */
+.reservation-cta {
+    background-color: var(--leaf-green);
+    padding: 65px 8%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Reservation Heading */
+.reservation-cta h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 600;
+    color: var(--secondary-color);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+/* Reservation Description */
+.reservation-cta p {
+    font-family: var(--body-font);
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--secondary-color);
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+/* Reservation Button */
+.reservation-cta .btn {
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 16px 38px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Button Hover */
+.reservation-cta .btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--leaf-green);
+    transform: translateY(-4px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .reservation-cta {
+        padding: 70px 6%;
+    }
+
+    .reservation-cta h2 {
+        font-size: 36px;
+    }
+
+    .reservation-cta p {
+        font-size: 16px;
+    }
+
+    .reservation-cta .btn {
+        padding: 14px 30px;
+    }
+}
+
+/* ==================================
+   11. FOOTER STYLING
+================================== */
+
+/* Main Footer */
+footer {
+    background-color: var(--dark-text);
+    color: var(--secondary-color);
+    padding: 45px 8% 20px
+}
+
+/* Three Footer Columns */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto 25px;
+}
+
+/* Footer Headings */
+.footer-column h3 {
+    font-family: var(--heading-font);
+    font-size: 23px;
+    color: #D9B786;
+    margin-bottom: 12px;
+   
+}
+
+/* Footer Paragraphs */
+.footer-column p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+/* Footer Links */
+.footer-column a {
+    display: inline-block;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 18px;
+    margin-bottom: 10px;
+
+    transition: color 0.3s ease;
+}
+
+/* Footer Link Hover */
+.footer-column a:hover,
+.footer-column a:focus-visible {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Copyright Section */
+.copyright {
+    border-top: 1px solid rgba(245, 233, 218, 0.2);
+    padding-top: 18px;
+    text-align: center;
+    font-size: 14px;
+    color: #D4C3B5;
+}
+
+/* Tablet Layout */
+@media (max-width: 900px) {
+    .footer-container {
+        gap: 30px;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    footer {
+        padding: 55px 6% 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-bottom: 35px;
+    }
+
+    .footer-column h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .copyright {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+}
+
+/* ==================================
+   12. FOOTER SOCIAL ICONS
+================================== */
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid #D9B786;
+    border-radius: 50%;
+
+    color: var(--secondary-color);
+    text-decoration: none;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Icon Size */
+.social-links svg {
+    width: 19px;
+    height: 19px;
+}
+
+/* Hover Effect */
+.social-links a:hover {
+    background-color: var(--accent-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.social-links a:focus-visible {
+    outline: 2px solid var(--porcelain-blue);
+    outline-offset: 4px;
+}
+
+/* ==================================
+   14. ABOUT US HERO SECTION
+================================== */
+
+.about-hero {
+    background-color: #542916;
+    padding: 90px 8%;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+/* About Hero Heading */
+.about-hero h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+/* Decorative Orange Line */
+.about-hero h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 25px auto 0;
+    border-radius: 10px;
+}
+
+/* About Hero Description */
+.about-hero p {
+    font-family: var(--body-font);
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 65px 6%;
+    }
+
+    .about-hero h2 {
+        font-size: 36px;
+    }
+
+    .about-hero p {
+        font-size: 16px;
+    }
+}
+
+/* ==================================
+   15. OUR STORY SECTION
+================================== */
+
+.our-story {
+    background-color: #FEFAF0;
+    padding: 100px 8%;
+}
+
+/* Two-Column Layout */
+.story-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Founder Image */
+.story-container img {
+    display: block;
+    width: 100%;
+    height: 520px;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(43, 27, 18, 0.12);
+}
+
+/* Story Heading */
+.story-content h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+/* Decorative Accent Line */
+.story-content h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin-top: 22px;
+}
+
+/* Story Paragraph */
+.story-content p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: var(--dark-text);
+    max-width: 550px;
+}
+
+/* Tablet Layout */
+@media (max-width: 900px) {
+    .our-story {
+        padding: 75px 6%;
+    }
+
+    .story-container {
+        gap: 35px;
+    }
+
+    .story-container img {
+        height: 450px;
+        object-position: center top;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .our-story {
+        padding: 65px 6%;
+    }
+
+    .story-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .story-container img {
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    .story-content h2 {
+        font-size: 34px;
+    }
+
+    .story-content p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+}
+
+/* ==================================
+   16. OUR VALUES SECTION
+================================== */
+
+.our-values {
+    background-color: var(--secondary-color);
+    padding: 90px 8%;
+    text-align: center;
+}
+
+/* Section Heading */
+.our-values h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(34px, 4vw, 48px);
+    color: var(--primary-color);
+    margin-bottom: 45px;
+}
+
+/* Values Container */
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Individual Value Cards */
+.values-list li {
+    background-color: #FEFAF0;
+    padding: 45px 30px;
+    border-radius: 18px;
+
+    border: 1px solid rgba(111, 78, 55, 0.15);
+    box-shadow: 0 5px 20px rgba(43, 27, 18, 0.05);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+.values-list li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(43, 27, 18, 0.12);
+}
+
+/* Value Names */
+.values-list strong {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 27px;
+    font-weight: 600;
+    color: var(--leaf-green);
+    margin-bottom: 18px;
+}
+
+/* Value Descriptions */
+.values-list p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--dark-text);
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .our-values {
+        padding: 65px 6%;
+    }
+
+    .values-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .values-list li {
+        padding: 35px 25px;
+    }
+}
+
+/* ==================================
+   17. FOUNDER QUOTE SECTION
+================================== */
+
+.founder-quote {
+    background-color: #FEFAF0;
+    padding: 85px 8%;
+}
+
+/* Quote Container Width */
+.founder-quote h2,
+.founder-quote blockquote,
+.founder-quote p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section Heading */
+.founder-quote h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(30px, 3.5vw, 42px);
+    color: var(--primary-color);
+    margin-bottom: 35px;
+}
+
+/* Main Quotation */
+.founder-quote blockquote {
+    font-family: var(--heading-font);
+    font-size: clamp(23px, 2.5vw, 32px);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.6;
+
+    color: var(--dark-text);
+
+    border-left: 4px solid var(--accent-color);
+    padding: 12px 0 12px 30px;
+    margin-bottom: 25px;
+}
+
+/* Founder Credit */
+.founder-quote p {
+    font-family: var(--body-font);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--leaf-green);
+    padding-left: 34px;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .founder-quote {
+        padding: 60px 6%;
+    }
+
+    .founder-quote h2 {
+        font-size: 30px;
+    }
+
+    .founder-quote blockquote {
+        font-size: 23px;
+        padding-left: 20px;
+    }
+
+    .founder-quote p {
+        padding-left: 24px;
+        font-size: 14px;
+    }
+}
+
+/* ==================================
+   18. RETRO CAFÉ MENU DESIGN
+================================== */
+
+/* Main Menu Board */
+.menu-page {
+    width: min(1120px, calc(100% - 48px));
+    margin: 60px auto 80px;
+    padding: 65px;
+
+    background-color: #FEFAF0;
+    box-shadow: 0 15px 40px rgba(43, 27, 18, 0.10);
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    grid-template-areas:
+        "hero hero"
+        "hot bakery"
+        "cold bakery";
+
+    column-gap: 55px;
+    row-gap: 45px;
+    align-items: start;
+}
+
+/* ==================================
+   19. MENU TITLE
+================================== */
+
+.menu-hero {
+    grid-area: hero;
+    position: relative;
+    background: transparent;
+    padding: 0 0 30px;
+    border-bottom: 2px solid #718866;
+}
+
+/* Oversized Retro Heading */
+.menu-hero h2 {
+    font-family: var(--body-font);
+    font-size: clamp(65px, 9vw, 110px);
+    font-weight: 700;
+    letter-spacing: -4px;
+    line-height: 1;
+
+    color: #718866;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Menu Subtitle */
+.menu-hero p {
+    font-family: var(--body-font);
+    font-size: 16px;
+    font-style: italic;
+    color: #718866;
+    line-height: 1.6;
+}
+
+/* ==================================
+   20. MENU CATEGORY LAYOUT
+================================== */
+
+/* Hot Drinks */
+.menu-page > .menu-section:nth-of-type(2) {
+    grid-area: hot;
+}
+
+/* Cold Drinks */
+.menu-page > .menu-section:nth-of-type(3) {
+    grid-area: cold;
+}
+
+/* Bakery & Bites */
+.menu-page > .menu-section:nth-of-type(4) {
+    grid-area: bakery;
+}
+
+/* Category Sections */
+.menu-page .menu-section {
+    background: transparent;
+    padding: 0;
+    min-width: 0;
+}
+
+/* Category Headings */
+.menu-page .menu-section h2 {
+    font-family: var(--body-font);
+    font-size: 22px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #718866;
+
+    padding-bottom: 10px;
+    border-bottom: 3px solid #718866;
+    margin-bottom: 18px;
+}
+
+/* ==================================
+   21. MINIMAL MENU TABLES
+================================== */
+
+/* Table Wrapper */
+.menu-page .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Table Layout */
+.menu-page .menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--body-font);
+    background: transparent;
+}
+
+/* Table Header */
+.menu-page .menu-table thead {
+    background-color: var(--primary-color);
+    color: #FEFAF0;
+}
+
+/* Column Labels */
+.menu-page .menu-table th {
+    padding: 10px 8px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Table Rows */
+.menu-page .menu-table td {
+    padding: 13px 8px;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(113, 136, 102, 0.22);
+    line-height: 1.5;
+}
+
+/* Product Names */
+.menu-page .menu-table td:first-child {
+    font-weight: 700;
+    font-size: 13px;
+    color: #607957;
+    width: 38%;
+}
+
+/* Descriptions */
+.menu-page .menu-table td:nth-child(2) {
+    font-size: 12px;
+    color: #776D5F;
+    width: 44%;
+}
+
+/* Prices */
+.menu-page .menu-table td:last-child,
+.menu-page .menu-table th:last-child {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.menu-page .menu-table td:last-child {
+    font-weight: 700;
+    font-size: 13px;
+    color: #607957;
+}
+
+/* Subtle Alternating Rows */
+.menu-page .menu-table tbody tr:nth-child(even) {
+    background-color: rgba(113, 136, 102, 0.055);
+}
+
+/* Row Hover */
+.menu-page .menu-table tbody tr:hover {
+    background-color: #E8EDDF;
+    transition: background-color 0.3s ease;
+}
+
+/* ==================================
+   22. RESPONSIVE MENU
+================================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .menu-page {
+        width: calc(100% - 36px);
+        padding: 40px 28px;
+
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "hero"
+            "hot"
+            "cold"
+            "bakery";
+
+        row-gap: 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .menu-page {
+        width: calc(100% - 24px);
+        margin: 25px auto 45px;
+        padding: 28px 18px;
+        row-gap: 35px;
+    }
+
+    .menu-hero h2 {
+        font-size: 60px;
+        letter-spacing: -2px;
+    }
+
+    .menu-hero p {
+        font-size: 14px;
+    }
+
+    .menu-page .menu-section h2 {
+        font-size: 20px;
+    }
+
+    /* Keep tables readable on small screens */
+    .menu-page .menu-table {
+        min-width: 430px;
+    }
+
+    .menu-page .menu-table td {
+        padding: 11px 7px;
+    }
+}
+
+/* ==================================
+   RETRO MENU HEADER
+================================== */
+
+.menu-hero {
+    grid-area: hero;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    background: transparent;
+    padding: 0 0 35px;
+    border-bottom: 3px solid #A13A1E;
+}
+
+/* Small Brand Label */
+.menu-eyebrow {
+    font-family: var(--body-font);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #96391F;
+    margin-bottom: 18px;
+}
+
+/* Big Retro Menu Heading */
+.menu-hero h2 {
+    font-family: var(--body-font);
+    font-size: clamp(60px, 8vw, 95px);
+    font-weight: 700;
+    letter-spacing: -4px;
+    line-height: 1;
+
+    color: #43533D;
+    margin-bottom: 18px;
+}
+
+/* Terracotta Period */
+.menu-hero h2 span {
+    color: #A13A1E;
+}
+
+/* Subtitle */
+.menu-subtitle {
+    font-family: var(--heading-font);
+    font-size: 19px;
+    font-style: italic;
+    color: #542916;
+    line-height: 1.6;
+}
+
+/* Coffee Illustration Badge */
+.menu-stamp {
+    width: 145px;
+    height: 145px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F1C166;
+    color: #542916;
+    border-radius: 50%;
+    transform: rotate(-10deg);
+}
+
+.menu-stamp svg {
+    width: 80px;
+    height: 80px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .menu-hero {
+        gap: 15px;
+        padding-bottom: 25px;
+    }
+
+    .menu-eyebrow {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .menu-hero h2 {
+        font-size: clamp(42px, 11vw, 60px);
+        letter-spacing: -2px;
+    }
+
+    .menu-subtitle {
+        font-size: 15px;
+    }
+
+    .menu-stamp {
+        width: 75px;
+        height: 75px;
+    }
+
+    .menu-stamp svg {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* ==================================
+   RETRO MENU COLOUR CONTRAST
+================================== */
+
+/* Category Headings */
+.menu-page .menu-section h2 {
+    color: #FEFAF0;
+    padding: 14px 20px;
+    border-bottom: none;
+    border-radius: 4px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+/* Hot Drinks - Forest Green */
+.menu-page > .menu-section:nth-of-type(2) h2 {
+    background-color: #43533D;
+}
+
+/* Cold Drinks - Espresso Brown */
+.menu-page > .menu-section:nth-of-type(3) h2 {
+    background-color: #542916;
+}
+
+/* Bakery & Bites - Terracotta */
+.menu-page > .menu-section:nth-of-type(4) h2 {
+    background-color: #A13A1E;
+}
+
+/* Slimmer Table Headers */
+.menu-page .menu-table th {
+    padding: 8px;
+    background-color: #6F4E37;
+}
+
+/* Terracotta Prices */
+.menu-page .menu-table td:last-child {
+    color: #96391F;
+    font-weight: 700;
+}
+
+/* Soft Alternating Rows */
+.menu-page .menu-table tbody tr:nth-child(even) {
+    background-color: #F3E9D9;
+}
+
+/* Warmer Hover Colour */
+.menu-page .menu-table tbody tr:hover {
+    background-color: #E9D6B8;
+}
+
+/* ==================================
+   MENU DECORATIVE FINISH
+================================== */
+
+.menu-note {
+    grid-column: 1 / -1;
+    background-color: #F1C166;
+    border-radius: 18px 35px 15px 30px;
+    padding: 30px 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.note-label {
+    color: #96391F;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.menu-note h3 {
+    font-family: var(--heading-font);
+    font-size: 27px;
+    color: #542916;
+    margin-bottom: 8px;
+}
+
+.menu-note-content > p:last-child {
+    color: #542916;
+    font-size: 15px;
+}
+
+.menu-note-symbol {
+    font-size: 75px;
+    color: #43533D;
+    line-height: 1;
+}
+
+/* Bottom Details */
+.menu-bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    border-top: 1px solid #718866;
+    padding-top: 18px;
+}
+
+.menu-bottom p {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #718866;
+}
+
+.menu-bottom p:last-child {
+    color: #A13A1E;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .menu-note {
+        padding: 25px 20px;
+    }
+
+    .menu-note h3 {
+        font-size: 22px;
+    }
+
+    .menu-note-symbol {
+        font-size: 45px;
+    }
+
+    .menu-bottom {
+        flex-wrap: wrap;
+    }
+}
+
+/* ==================================
+   23. GALLERY HERO SECTION
+================================== */
+
+.gallery-hero {
+    background-color: #FEFAF0;
+    padding: 85px 8% 55px;
+    text-align: center;
+}
+
+/* Gallery Heading */
+.gallery-hero h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 700;
+    color: var(--leaf-green);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Decorative Line */
+.gallery-hero h2::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 3px;
+    background-color: #A13A1E;
+    margin: 22px auto 0;
+}
+
+/* Gallery Description */
+.gallery-hero p {
+    font-size: 18px;
+    color: var(--dark-text);
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ==================================
+   24. GALLERY GRID
+================================== */
+
+.gallery-section {
+    background-color: #FEFAF0;
+    padding: 30px 6% 100px;
+}
+
+/* Four-Column Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Individual Gallery Cards */
+.gallery-grid figure {
+    background-color: #F5E9DA;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(43, 27, 18, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Gallery Images */
+.gallery-grid img {
+    display: block;
+    width: 100%;
+    height: 270px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+/* Image Hover Effect */
+.gallery-grid figure:hover img {
+    transform: scale(1.06);
+}
+
+/* Card Hover Effect */
+.gallery-grid figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(43, 27, 18, 0.15);
+}
+
+/* Image Captions */
+.gallery-grid figcaption {
+    font-family: var(--heading-font);
+    font-size: 18px;
+    font-weight: 600;
+
+    color: var(--primary-color);
+    text-align: center;
+
+    padding: 20px 12px;
+    border-top: 3px solid #D9822B;
+}
+
+/* ==================================
+   25. GALLERY RESPONSIVENESS
+================================== */
+
+/* Tablet - Two Columns */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Mobile - One Column */
+@media (max-width: 600px) {
+    .gallery-hero {
+        padding: 60px 6% 35px;
+    }
+
+    .gallery-hero h2 {
+        font-size: 36px;
+    }
+
+    .gallery-hero p {
+        font-size: 16px;
+    }
+
+    .gallery-section {
+        padding: 20px 6% 65px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .gallery-grid img {
+        height: 300px;
+    }
+
+    .gallery-grid figcaption {
+        font-size: 17px;
+    }
+}
+
+/* Reduce motion when requested */
+@media (prefers-reduced-motion: reduce) {
+    .gallery-grid figure,
+    .gallery-grid img {
+        transition: none;
+    }
+}
+
+
+/* ==================================
+   26. CONTACT HERO SECTION
+================================== */
+
+.contact-hero {
+    background-color: #43533D;
+    color: #FEFAF0;
+    padding: 65px 8% 135px;
+    text-align: center;
+}
+
+/* Hero Heading */
+.contact-hero h2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(36px, 5vw, 52px);
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Decorative Golden Line */
+.contact-hero h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #F1C166;
+    margin: 20px auto 0;
+}
+
+/* Hero Description */
+.contact-hero p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #FEFAF0;
+}
+
+
+/* ==================================
+   27. LUXURY BOOKING LAYOUT
+================================== */
+
+/* Main Contact Background */
+.contact-content {
+    background-color: #F5E9DA;
+    padding: 0 6% 90px;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Main Booking Container */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 0.85fr;
+    gap: 35px;
+    align-items: start;
+
+    max-width: 1250px;
+    margin: -85px auto 0;
+    padding: 40px;
+
+    position: relative;
+
+    background-color: #FEFAF0;
+    border: 3px solid #542916;
+    border-radius: 24px;
+
+    box-shadow: 0 15px 35px rgba(43, 27, 18, 0.12);
+}
+
+/* Left Reservation Panel */
+.reservation-panel {
+    min-width: 0;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Small Booking Label */
+.booking-kicker {
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: #A13A1E;
+    margin-bottom: 12px;
+}
+
+/* Main Booking Heading */
+.reservation-panel h2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1.2;
+
+    color: #542916;
+    margin-bottom: 25px;
+}
+
+/* Elegant Italic Word */
+.reservation-panel h2 em {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #A13A1E;
+}
+
+/* Booking Steps */
+.booking-steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    border-bottom: 1px solid #C6B7A4;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+/* Individual Step Labels */
+.booking-steps span {
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #43533D;
+}
+
+
+/* ==================================
+   28. CAFÉ INFORMATION PANEL
+================================== */
+
+/* Right Information Panel */
+.contact-info {
+    min-width: 0;
+    background-color: #E8E9D7;
+    padding: 30px;
+
+    border-radius: 12px;
+    border: 1px solid #C6CEB8;
+    align-self: start;
+}
+
+/* Information Heading */
+.contact-info h2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+    letter-spacing: -1px;
+
+    color: #43533D;
+    margin-bottom: 28px;
+}
+
+/* Individual Information Groups */
+.info-group {
+    margin-bottom: 25px;
+}
+
+/* Subheadings */
+.info-group h3,
+.opening-hours h3 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    color: #A13A1E;
+    margin-bottom: 10px;
+}
+
+/* Information Text */
+.info-group p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #542916;
+}
+
+/* Contact Links */
+.info-group a {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #43533D;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.info-group a:hover {
+    color: #A13A1E;
+    text-decoration: underline;
+}
+
+/* Opening Hours Section */
+.opening-hours {
+    border-top: 1px solid #B7C1AD;
+    padding-top: 25px;
+}
+
+/* Opening Hours Table */
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hours-table th,
+.hours-table td {
+    text-align: left;
+    padding: 10px 4px;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    color: #542916;
+
+    border-bottom: 1px solid #CDD3C2;
+}
+
+/* Table Headings */
+.hours-table th {
+    font-weight: 700;
+    color: #43533D;
+}
+
+
+/* ==================================
+   29. RESERVATION FORM STYLING
+================================== */
+
+/* Form Layout */
+#reservation-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 18px;
+}
+
+/* Form Groups */
+#reservation-form .form-group {
+    min-width: 0;
+}
+
+/* Form Labels */
+#reservation-form .form-group > label {
+    display: block;
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #542916;
+    margin-bottom: 8px;
+}
+
+/* Input Fields */
+#reservation-form input:not([type="radio"]),
+#reservation-form select,
+#reservation-form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #C6B7A4;
+    border-radius: 8px;
+
+    color: #542916;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Consistent Field Heights */
+#reservation-form input:not([type="radio"]),
+#reservation-form select {
+    min-height: 48px;
+}
+
+/* Placeholder Text */
+#reservation-form input::placeholder,
+#reservation-form textarea::placeholder {
+    color: #8A8178;
+    font-size: 13px;
+}
+
+/* Input Focus Effects */
+#reservation-form input:focus,
+#reservation-form select:focus,
+#reservation-form textarea:focus {
+    outline: none;
+    border-color: #A13A1E;
+
+    box-shadow: 0 0 0 3px rgba(161, 58, 30, 0.15);
+}
+
+/* Occasion Group */
+#reservation-form fieldset {
+    grid-column: 1 / -1;
+    min-width: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    border: 1px solid #C6B7A4;
+    border-radius: 8px;
+    padding: 18px;
+    background-color: #FFFFFF;
+}
+
+/* Occasion Heading */
+#reservation-form legend {
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #542916;
+    padding: 0 8px;
+}
+
+/* Radio Button Labels */
+#reservation-form fieldset label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 14px;
+    color: #542916;
+    cursor: pointer;
+}
+
+/* Radio Button Colour */
+#reservation-form input[type="radio"] {
+    accent-color: #A13A1E;
+    cursor: pointer;
+}
+
+/* Special Requests */
+#reservation-form .form-group:last-of-type {
+    grid-column: 1 / -1;
+}
+
+/* Textarea */
+#reservation-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Reservation Button */
+#reservation-form button {
+    grid-column: 1 / -1;
+    width: 100%;
+
+    padding: 16px 25px;
+
+    background-color: #A13A1E;
+    color: #FFFFFF;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Button Hover */
+#reservation-form button:hover {
+    background-color: #43533D;
+    transform: translateY(-2px);
+}
+
+/* Keyboard Focus */
+#reservation-form button:focus-visible {
+    outline: 3px solid #F1C166;
+    outline-offset: 4px;
+}
+
+
+/* ==================================
+   30. RESPONSIVE CONTACT PAGE
+================================== */
+
+/* Tablet Layout */
+@media (max-width: 900px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        gap: 30px;
+    }
+
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+
+    .contact-hero {
+        padding: 45px 6% 115px;
+    }
+
+    .contact-hero h2 {
+        font-size: 34px;
+    }
+
+    .contact-hero p {
+        font-size: 15px;
+    }
+
+    .contact-content {
+        padding: 0 4% 60px;
+    }
+
+    .contact-grid {
+        padding: 20px;
+        margin-top: -70px;
+        border-width: 2px;
+    }
+
+    .reservation-panel {
+        padding: 5px;
+    }
+
+    .reservation-panel h2 {
+        font-size: 36px;
+    }
+
+    .booking-kicker {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .booking-steps {
+        gap: 10px;
+    }
+
+    .booking-steps span {
+        font-size: 11px;
+    }
+
+    .contact-info {
+        padding: 24px;
+    }
+
+    /* Stack Form Fields */
+    #reservation-form {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #reservation-form button {
+        padding: 15px;
+    }
+
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    #reservation-form button,
+    #reservation-form input,
+    #reservation-form select,
+    #reservation-form textarea {
+        transition: none;
+    }
+
+    #reservation-form button:hover {
+        transform: none;
+    }
+
+}
